@@ -91,3 +91,15 @@ The action function generates a URL for the given controller action
 ```php
 $url = action('HomeController@home');
 ```
+
+### New Version of Laravel
+
+For version 8 and above, you shoudl use like this:
+1. add this line at the top of the web.php:
+```php
+use App\Http\Controllers\HomeController;
+```
+2. use actions in get like this:
+```php
+Route::get('/', [HomeController::class, 'home'])->name('home');
+```
